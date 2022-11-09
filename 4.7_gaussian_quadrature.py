@@ -19,6 +19,10 @@ for i in range(1,10):
     print(gauss(fun,0,1,i))
 
 # advanced version of gauss quadrature, modified from matlab code by Peter J. Acklam. Not including the function needed to be quadratured.
+# gaussquad(...) with no output arguments plots the base points 'xx' and the weight factors 'ww'.
+# According to the original program, written in MATLAB, concepts for finding the base points and weight factors can be found on 
+# page 93 of "Methods of Numerical Integration" by Philip Davis and Philip Rabinowitz.
+
 def gaussquad(*args): 
     # save the variables in a tuple called "args", in the order of n, b, a
     u = []
