@@ -34,9 +34,8 @@ def gaussquad(*args):
         # gaussquad(N, C) assumes the interval is from 0 to C.
         b = (0,)
         args += b
+    
     #print(args)
-    else:
-        return
 
     # Same as in matlab, A = diag(u, -1) + diag(u, 1), but faster (no addition).
     for i in range(args[0] - 1):
@@ -61,10 +60,12 @@ def gaussquad(*args):
     if len(vlsort) and len(vtsort): # if they exist
         xx = np.transpose(vlsort)
         ww = np.transpose(w)
-        print(xx)
-        print(ww)
+        #print(xx)
+        #print(ww)
         return
     return [xx, ww]
 
 # driver's code
-gaussquad(5)
+gaussquad(4)
+gaussquad(4,5)
+gaussquad(4,6,2)
