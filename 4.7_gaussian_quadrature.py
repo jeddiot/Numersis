@@ -66,8 +66,9 @@ def gaussquad(*args):
         ww = np.transpose(w)
         #print(xx)
         #print(ww)
-        return
-    return [xx, ww]
+        return [xx, ww]
+    else:
+        return None
 
 # driver's code
 gaussquad(4)
